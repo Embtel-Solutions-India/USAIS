@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting… | USAIS</title>
+  <meta name="robots" content="noindex, follow">
+  <!-- Instant redirect to homepage for any non-existent path -->
+  <meta http-equiv="refresh" content="0; url=/">
+  <link rel="canonical" href="https://www.usareaimmigrationservices.com/">
+  <script>
+    /* Redirect immediately; preserves any query string back to home */
+    window.location.replace('/');
+  </script>
+  <style>
+    :root { --navy:#1A3A6B; --gold:#C9A84C; --white:#FFFFFF; --text-mid:#5A6B85; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background:var(--navy); color:var(--white);
+      min-height:100vh; display:flex; align-items:center; justify-content:center;
+      text-align:center; padding:24px;
+    }
+    .box { max-width:480px; }
+    .code { font-size:4rem; font-weight:700; color:var(--gold); line-height:1; margin-bottom:12px; }
+    h1 { font-size:1.4rem; margin-bottom:12px; font-weight:600; }
+    p { color:rgba(255,255,255,.7); font-size:.95rem; line-height:1.6; margin-bottom:24px; }
+    a {
+      display:inline-block; background:var(--gold); color:var(--navy);
+      text-decoration:none; font-weight:700; padding:13px 28px; border-radius:8px;
+      transition:transform .2s;
+    }
+    a:hover { transform:translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you’re looking for doesn’t exist or has moved. Taking you to our homepage…</p>
+    <a href="/">Go to Homepage</a>
+  </div>
+</body>
+</html>
