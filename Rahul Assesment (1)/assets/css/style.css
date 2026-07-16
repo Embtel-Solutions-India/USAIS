@@ -78,13 +78,13 @@ a    { color:inherit; }
 .hamburger span { width:24px; height:2px; background:var(--navy); border-radius:2px; transition:.3s; }
 
 /* ─── 05. BUTTONS ───────────────────────────────────────── */
-.btn-gold { background:var(--gold-shimmer); color:var(--navy); font-weight:700; font-size:.85rem; padding:10px 24px; border:none; border-radius:6px; cursor:pointer; letter-spacing:.03em; text-transform:uppercase; transition:all .3s; text-decoration:none; display:inline-block; box-shadow:var(--shadow-gold); }
+.btn-gold { background:var(--gold-shimmer); color:var(--navy); font-weight:700; font-size:.85rem; padding:10px 24px; border:none; border-radius:6px; cursor:pointer; letter-spacing:.03em; text-transform:uppercase; transition:all .3s; text-decoration:none; display:inline-block; box-shadow:var(--shadow-gold); white-space:nowrap; }
 .btn-gold:hover { transform:translateY(-2px); box-shadow:0 6px 28px rgba(201,168,76,.4); }
-.btn-blue { background:var(--navy); color:var(--white); font-weight:600; font-size:.9rem; padding:14px 32px; border:none; border-radius:6px; text-decoration:none; display:inline-block; cursor:pointer; transition:all .3s; }
+.btn-blue { background:var(--navy); color:var(--white); font-weight:600; font-size:.9rem; padding:14px 32px; border:none; border-radius:6px; text-decoration:none; display:inline-block; cursor:pointer; transition:all .3s; white-space:nowrap; }
 .btn-blue:hover { opacity:.88; transform:translateY(-1px); }
-.btn-outline { background:transparent; color:var(--white); font-weight:600; font-size:.9rem; padding:12px 28px; border:2px solid var(--gold); border-radius:6px; cursor:pointer; transition:all .3s; text-decoration:none; display:inline-block; }
+.btn-outline { background:transparent; color:var(--white); font-weight:600; font-size:.9rem; padding:12px 28px; border:2px solid var(--gold); border-radius:6px; cursor:pointer; transition:all .3s; text-decoration:none; display:inline-block; white-space:nowrap; }
 .btn-outline:hover { background:var(--gold); color:var(--navy); }
-.btn-outline-dark { background:transparent; color:var(--white); font-weight:600; font-size:.9rem; padding:14px 32px; border:2px solid var(--gold); border-radius:6px; cursor:pointer; transition:all .3s; text-decoration:none; display:inline-block; text-align:center; }
+.btn-outline-dark { background:transparent; color:var(--white); font-weight:600; font-size:.9rem; padding:14px 32px; border:2px solid var(--gold); border-radius:6px; cursor:pointer; transition:all .3s; text-decoration:none; display:inline-block; text-align:center; white-space:nowrap; }
 .btn-outline-dark:hover { background:var(--gold); color:var(--navy); }
 
 /* ─── 06. HOMEPAGE HERO ─────────────────────────────────── */
@@ -428,6 +428,19 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
 .page-nav-card .dir   { font-size:.75rem; color:var(--text-light); text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
 .page-nav-card .title { font-family:'Playfair Display',serif; color:var(--navy); font-size:1.05rem; font-weight:600; }
 
+/* ─── 40. PROGRAM TIERS (PRICING-STYLE CARDS) ───────────── */
+.tier-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:40px 0; }
+.tier-card { background:var(--white); border:1px solid #E8ECF2; border-radius:var(--radius); padding:32px 28px; display:flex; flex-direction:column; position:relative; transition:all .3s; }
+.tier-card:hover { border-color:var(--gold); box-shadow:var(--shadow-soft); transform:translateY(-3px); }
+.tier-card.featured { border:2px solid var(--gold); box-shadow:var(--shadow-gold); }
+.tier-badge { position:absolute; top:-13px; left:28px; background:var(--gold-shimmer); color:var(--navy); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:5px 14px; border-radius:20px; }
+.tier-label { font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:8px; }
+.tier-card h3 { font-family:'Playfair Display',serif; color:var(--navy); font-size:1.25rem; margin-bottom:10px; }
+.tier-card .desc { font-size:.88rem; color:var(--text-mid); line-height:1.6; margin-bottom:18px; }
+.tier-card ul { margin:0 0 22px 20px; color:var(--text-mid); font-size:.88rem; line-height:1.8; flex:1; }
+.tier-card ul li { margin-bottom:6px; }
+.tier-card .btn-gold, .tier-card .btn-outline-dark { text-align:center; }
+
 /* ─── 39. RESPONSIVE ────────────────────────────────────── */
 @media (max-width:1024px) {
   .routes            { grid-template-columns:1fr; }
@@ -447,6 +460,7 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
   .facts-inner       { grid-template-columns:1fr 1fr; }
   .svc-grid          { grid-template-columns:1fr 1fr; }
   .why-grid          { grid-template-columns:1fr 1fr; }
+  .tier-grid         { grid-template-columns:1fr; }
 }
 
 @media (max-width:768px) {
@@ -553,6 +567,7 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
   .process-grid  { grid-template-columns:1fr; }
   .elig-grid     { grid-template-columns:1fr; }
   .pillars-grid  { grid-template-columns:1fr; }
+  .tier-grid     { grid-template-columns:1fr; }
 
   /* ── Sections ── */
   .section { padding:40px 0; }
