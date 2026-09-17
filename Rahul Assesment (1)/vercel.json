@@ -53,6 +53,9 @@
     { "source": "/l1b-visa",                   "destination": "/pages/l1b",                  "permanent": true },
     { "source": "/l1b-visa.html",              "destination": "/pages/l1b",                  "permanent": true },
 
+    { "source": "/pages/l1a-approvals",        "destination": "/l1a-approvals",              "permanent": true },
+    { "source": "/pages/l1a-approvals.html",   "destination": "/l1a-approvals",              "permanent": true },
+
     { "source": "/set-up-a-business",          "destination": "/pages/us-branch-setup",      "permanent": true },
     { "source": "/us-business-program",        "destination": "/pages/us-branch-setup",      "permanent": true },
     { "source": "/material-export-services",   "destination": "/pages/business-operations-support", "permanent": true },
