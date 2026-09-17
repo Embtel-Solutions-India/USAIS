@@ -77,6 +77,12 @@ a    { color:inherit; }
 .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
 .hamburger span { width:24px; height:2px; background:var(--navy); border-radius:2px; transition:.3s; }
 
+/* Reserves the header's real height before header.html finishes loading,
+   so the page doesn't jump once the topbar/navbar are injected. */
+#topbar-placeholder { display:block; min-height:104px; background:linear-gradient(to bottom, var(--navy) 0 29px, #fff 29px 100%); border-bottom:2px solid var(--gold); }
+@media (max-width:740px) { #topbar-placeholder { min-height:150px; background:linear-gradient(to bottom, var(--navy) 0 74px, #fff 74px 100%); } }
+@media (max-width:420px) { #topbar-placeholder { min-height:200px; background:linear-gradient(to bottom, var(--navy) 0 122px, #fff 122px 100%); } }
+
 /* ─── 05. BUTTONS ───────────────────────────────────────── */
 .btn-gold { background:var(--gold-shimmer); color:var(--navy); font-weight:700; font-size:.85rem; padding:10px 24px; border:none; border-radius:6px; cursor:pointer; letter-spacing:.03em; text-transform:uppercase; transition:all .3s; text-decoration:none; display:inline-block; box-shadow:var(--shadow-gold); white-space:nowrap; }
 .btn-gold:hover { transform:translateY(-2px); box-shadow:0 6px 28px rgba(201,168,76,.4); }
