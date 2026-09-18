@@ -76,7 +76,7 @@ document.addEventListener('click', function (e) {
   }
 });
 
-/* Auto-activate tab from URL hash (e.g. /pages/l1a.html#tab-branch) */
+/* Auto-activate tab from URL hash (e.g. /l1a.html#tab-branch) */
 (function () {
   var hash = window.location.hash.replace('#', '');
   if (hash && hash.startsWith('tab-')) {
