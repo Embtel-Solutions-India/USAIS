@@ -22,6 +22,20 @@
 
 (function () {
 
+  /* Google Analytics: one shared installation for every page using components.js. */
+  if (!window.__usaisGtagInitialized) {
+    window.__usaisGtagInitialized = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-1556XBJ3EC');
+
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1556XBJ3EC';
+    document.head.appendChild(gtagScript);
+  }
+
   /* ── FONT AWESOME ──────────────────────────────────────── */
   if (!document.getElementById('usais-fa')) {
     var fa = document.createElement('link');
@@ -160,16 +174,25 @@
   clearEl('disclaimer-placeholder');
 
   /* ── TAWK.TO LIVE CHAT ──────────────────────────────────── */
-  window.Tawk_API = window.Tawk_API || {};
-  window.Tawk_LoadStart = new Date();
-  (function () {
+  function loadTawkChat() {
+    if (window.__usaisTawkLoaded) return;
+    window.__usaisTawkLoaded = true;
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_LoadStart = new Date();
     var s1 = document.createElement('script');
-    var s0 = document.getElementsByTagName('script')[0];
     s1.async = true;
     s1.src = 'https://embed.tawk.to/6a442e64b271bd1d477e92a7/1jsd5af6f';
     s1.charset = 'UTF-8';
     s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
+    document.body.appendChild(s1);
+  }
+
+  if (document.readyState === 'complete') {
+    window.setTimeout(loadTawkChat, 5000);
+  } else {
+    window.addEventListener('load', function () {
+      window.setTimeout(loadTawkChat, 5000);
+    }, { once: true });
+  }
 
 })();

@@ -176,8 +176,8 @@ a    { color:inherit; }
 .section-hero-glow { position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%); top:-150px; right:-100px; pointer-events:none; }
 .section-hero-inner { max-width:1280px; margin:0 auto; padding:0 24px; position:relative; z-index:2; }
 .section-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,.15); border:1px solid rgba(201,168,76,.3); border-radius:40px; padding:6px 18px; font-size:.78rem; color:var(--gold-light); font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:16px; }
-.section-hero h2 { font-family:'Playfair Display',serif; font-weight:800; font-size:clamp(2rem,4vw,3rem); color:var(--white); line-height:1.15; margin-bottom:16px; max-width:700px; }
-.section-hero h2 .gold { color:var(--gold-light); }
+.section-hero h1,.section-hero h2 { font-family:'Playfair Display',serif; font-weight:800; font-size:clamp(2rem,4vw,3rem); color:var(--white); line-height:1.15; margin-bottom:16px; max-width:700px; }
+.section-hero h1 .gold,.section-hero h2 .gold { color:var(--gold-light); }
 .section-hero-sub { color:rgba(255,255,255,.65); font-size:1.05rem; line-height:1.7; max-width:620px; }
 .section-hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:24px; }
 
@@ -470,6 +470,7 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
 }
 
 @media (max-width:768px) {
+  .topbar-inner{gap:10px !important;}
   /* ── Topbar ── */
   .topbar-inner > div:last-child { display:none; }
   .topbar-inner { justify-content:center; }
@@ -494,7 +495,7 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
   .section-inner { padding:0 18px; }
   .section-hero { padding:56px 0 44px; }
   .section-hero-inner { padding:0 18px; }
-  .section-hero h2 { font-size:clamp(1.7rem,6vw,2.3rem); }
+  .section-hero h1,.section-hero h2 { font-size:clamp(1.7rem,6vw,2.3rem); }
   .section-hero-actions { flex-direction:column; align-items:stretch; gap:12px; }
 
   /* ── Buttons — full width on mobile ── */
@@ -611,4 +612,14 @@ a.fact:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
   /* ── Tables ── */
   .cmp-table { font-size:.78rem; }
   .cmp-table th, .cmp-table td { padding:10px 10px; }
+}
+@media (max-width: 768px) {
+/* Bigger menu button (now 32x24px, should be at least 44x44px) */
+.hamburger { min-width: 44px; min-height: 44px; }
+/* Bigger tap area for top bar and footer links */
+.topbar a, .footer a { display: inline-block; padding: 12px 4px; }
+/* Put the top bar on one line: hide the email and the "Call:" / "WhatsApp:" words */
+.topbar-inner { flex-wrap: nowrap; gap: 16px !important; }
+.topbar-inner > span:nth-child(4),
+.topbar-inner > span:nth-child(5) { display: none; }
 }
