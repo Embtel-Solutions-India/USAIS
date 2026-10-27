@@ -34,6 +34,18 @@
     gtagScript.async = true;
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1556XBJ3EC';
     document.head.appendChild(gtagScript);
+
+    /* GA4 events: phone, WhatsApp and booking clicks (delegated, covers injected header/footer). */
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      var name = null;
+      if (h.indexOf('tel:') === 0) name = 'phone_click';
+      else if (h.indexOf('wa.me') !== -1 || h.indexOf('api.whatsapp.com') !== -1) name = 'whatsapp_click';
+      else if (/calendly\.com|cal\.com/.test(h)) name = 'booking_click';
+      if (name) window.gtag('event', name, { link_url: h, page_path: window.location.pathname });
+    });
   }
 
   /* ── FONT AWESOME ──────────────────────────────────────── */

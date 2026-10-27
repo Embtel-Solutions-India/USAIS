@@ -166,6 +166,93 @@
       .form-group input, .form-group select, .form-group textarea { font-size:16px; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.usareaimmigrationservices.com/contact#fremont",
+      "name": "US Area Immigration Services — Fremont, CA",
+      "url": "https://www.usareaimmigrationservices.com/contact",
+      "image": "https://www.usareaimmigrationservices.com/assets/images/logo/USAIS%402x-8.png",
+      "telephone": "+91-9056794311",
+      "email": "info@usareaimmigrationservices.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39159 Paseo Padre Parkway, Suite 115",
+        "addressLocality": "Fremont",
+        "addressRegion": "CA",
+        "postalCode": "94538",
+        "addressCountry": "US"
+      },
+      "parentOrganization": {
+        "@id": "https://www.usareaimmigrationservices.com/#organization"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.usareaimmigrationservices.com/contact#zirakpur",
+      "name": "US Area Immigration Services — Zirakpur, Punjab",
+      "url": "https://www.usareaimmigrationservices.com/contact",
+      "image": "https://www.usareaimmigrationservices.com/assets/images/logo/USAIS%402x-8.png",
+      "telephone": "+91-9056794311",
+      "email": "info@usareaimmigrationservices.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "SCO-12, A-Block, 2nd Floor, Chandigarh Citi Centre, VIP Road",
+        "addressLocality": "Zirakpur",
+        "addressRegion": "Punjab",
+        "postalCode": "140603",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "https://www.usareaimmigrationservices.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.usareaimmigrationservices.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.usareaimmigrationservices.com/contact"
+    }
+  ]
+}
+</script>
 </head>
 <body data-page="contact">
 
@@ -201,15 +288,9 @@
     <p class="contact-form-sub">Fill in the form below and a senior advisor will contact you within 1 business day. All information is confidential.</p>
 
     <form id="contactForm" novalidate autocomplete="on">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="firstName">First Name *</label>
-          <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name *</label>
-          <input type="text" id="lastName" name="lastName" required>
-        </div>
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
       </div>
 
       <div class="form-row">
@@ -223,77 +304,31 @@
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="country">Country of Residence *</label>
-          <select id="country" name="country" required>
-            <option value="" disabled selected>Select your country</option>
-            <option>India</option>
-            <option>United Arab Emirates</option>
-            <option>United Kingdom</option>
-            <option>United States</option>
-            <option>Singapore</option>
-            <option>Nigeria</option>
-            <option>South Africa</option>
-            <option>Germany</option>
-            <option>Canada</option>
-            <option>Australia</option>
-            <option>Saudi Arabia</option>
-            <option>Qatar</option>
-            <option>Malaysia</option>
-            <option>Kenya</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="service">Service Interested In *</label>
-          <select id="service" name="service" required>
-            <option value="" disabled selected>Select a service</option>
-            <option>L-1A Visa (Manager / Executive)</option>
-            <option>L-1B Visa (Specialized Knowledge)</option>
-            <option>EB-1C Green Card</option>
-            <option>US Branch / Company Setup</option>
-            <option>Settling &amp; Relocation Services</option>
-            <option>Business Assessment Only</option>
-            <option>Not Sure — Need Guidance</option>
-          </select>
-        </div>
-      </div>
-
       <div class="form-group">
-        <label for="company">Company Name &amp; Industry</label>
-        <input type="text" id="company" name="company">
-      </div>
-
-      <div class="form-group">
-        <label for="employees">Number of Employees in Your Company</label>
-        <select id="employees" name="employees">
-          <option value="" disabled selected>Select range</option>
-          <option>1–10</option>
-          <option>11–50</option>
-          <option>51–200</option>
-          <option>201–500</option>
-          <option>500+</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Tell Us About Your Situation</label>
-        <textarea id="message" name="message"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="hearAbout">How Did You Hear About Us?</label>
-        <select id="hearAbout" name="hearAbout">
-          <option value="" disabled selected>Select one</option>
-          <option>Google Search</option>
-          <option>LinkedIn</option>
-          <option>YouTube</option>
-          <option>WhatsApp / Referral</option>
-          <option>Webinar / Event</option>
-          <option>Friend or Colleague</option>
+        <label for="country">Country of Residence *</label>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option>India</option>
+          <option>United Arab Emirates</option>
+          <option>United Kingdom</option>
+          <option>United States</option>
+          <option>Singapore</option>
+          <option>Nigeria</option>
+          <option>South Africa</option>
+          <option>Germany</option>
+          <option>Canada</option>
+          <option>Australia</option>
+          <option>Saudi Arabia</option>
+          <option>Qatar</option>
+          <option>Malaysia</option>
+          <option>Kenya</option>
           <option>Other</option>
         </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Short Message</label>
+        <textarea id="message" name="message"></textarea>
       </div>
 
       <label class="consent-row" id="consentRow" for="consentCheck">
@@ -423,7 +458,7 @@
     e.preventDefault();
 
     /* ── Validation ── */
-    var required = ['firstName', 'lastName', 'email', 'phone', 'country', 'service'];
+    var required = ['name', 'email', 'phone', 'country'];
     var valid = true;
     required.forEach(function (id) {
       var el = document.getElementById(id);
@@ -459,16 +494,11 @@
     /* Build JSON payload */
     var payload = {
       _subject: 'New Consultation Request — USAIS Website',
-      firstName:  document.getElementById('firstName').value,
-      lastName:   document.getElementById('lastName').value,
+      name:       document.getElementById('name').value,
       email:      document.getElementById('email').value,
       phone:      document.getElementById('phone').value,
       country:    document.getElementById('country').value,
-      service:    document.getElementById('service').value,
-      company:    document.getElementById('company').value,
-      employees:  document.getElementById('employees').value,
-      message:    document.getElementById('message').value,
-      hearAbout:  document.getElementById('hearAbout').value
+      message:    document.getElementById('message').value
     };
 
     fetch(SUBMIT_URL, {
@@ -482,6 +512,7 @@
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (data.success === 'true' || data.success === true) {
+        if (window.gtag) window.gtag('event', 'form_submit', { form_id: 'contactForm', page_path: window.location.pathname });
         form.style.display = 'none';
         document.getElementById('formSuccess').style.display = 'block';
         window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 100, behavior: 'smooth' });
@@ -495,12 +526,10 @@
       /* Mailto fallback — show inline message, no popup */
       var p = payload;
       var body = encodeURIComponent(
-        'Name: ' + p.firstName + ' ' + p.lastName + '\n' +
+        'Name: ' + p.name + '\n' +
         'Email: ' + p.email + '\n' +
         'Phone: ' + p.phone + '\n' +
         'Country: ' + p.country + '\n' +
-        'Service: ' + p.service + '\n' +
-        'Company: ' + p.company + '\n' +
         'Message: ' + p.message
       );
       var mailtoHref = 'mailto:sales@usareaimmigrationservices.com'
