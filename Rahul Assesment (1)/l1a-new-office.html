@@ -174,6 +174,15 @@
   .cmp-table th,.cmp-table td{padding:10px 8px}
 }
 
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.hero-card{background:var(--white);border-radius:20px;padding:32px 36px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.hero-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin:0 0 18px}
+.hero-card ul{list-style:none;margin:0;padding:0}
+.hero-card li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #E8ECF2;font-size:.95rem;line-height:1.55;color:var(--text-dark,var(--navy))}
+.hero-card li:last-child{border-bottom:none;padding-bottom:0}
+.hero-card .tick{color:#2E8B57;font-weight:700;flex-shrink:0}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:480px){.hero-card{padding:24px 20px}}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
 .chip{background:var(--blue-pale);border:1px solid #E8ECF2;color:var(--navy);border-radius:40px;padding:8px 18px;font-size:.86rem;font-weight:500}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
@@ -213,12 +222,26 @@
   <div class="page-hero-glow"></div>
   <div class="page-hero-inner">
     <div class="breadcrumb"><a href="/">Home</a> &nbsp;→&nbsp; <a href="/l1a.html">L-1A Visa</a> &nbsp;→&nbsp; New Office</div>
+    <div class="hero-grid">
+    <div class="hero-main">
     <div class="badge"><i class="fa-solid fa-flag-usa"></i> For Indian Business Owners &amp; Entrepreneurs</div>
     <h1>L-1A New Office Visa: <span class="gold">Expand Your Indian Business to the USA</span></h1>
     <p class="page-hero-sub">The L-1A New Office visa lets Indian business owners, directors and senior managers open a US branch or subsidiary and live in America to run it. It's a <strong>business visa, not an investment visa</strong> — no fixed investment amount, and every industry is eligible. We handle it <strong>end to end</strong> — US office space, company registration, bank account, business plan and visa filing.</p>
     <div class="hero-actions">
       <a href="/contact.html" class="btn-gold">Schedule a Consultation</a>
       <a href="#talk-to-clients" class="btn-outline-dark">Talk to Our Approved L-1 Clients →</a>
+    </div>
+    </div>
+    <aside class="hero-card">
+      <h3>You may qualify if…</h3>
+      <ul>
+        <li><span class="tick">✓</span> You own or run an operating business in India (Pvt Ltd, LLP, partnership or proprietorship)</li>
+        <li><span class="tick">✓</span> You've worked there for 1 continuous year in the last 3 years</li>
+        <li><span class="tick">✓</span> Your role is managerial or executive</li>
+        <li><span class="tick">✓</span> You plan to open a US branch, subsidiary or affiliate</li>
+        <li><span class="tick">✓</span> You can fund the US office through its first year</li>
+      </ul>
+    </aside>
     </div>
   </div>
 </section>
